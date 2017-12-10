@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Knockin on your door</title>
+
+    <script src="libs/qimessaging/1.0/qimessaging.js"></script>
+    <script>
+function init(){
+  var session = new QiSession("192.168.0.15");
+
+  session.socket().on('connect', function() {
+    console.log("connected!");
+  });
+
+  session.service("ALTextToSpeech").done(function(tts) {
+    tts.say("\\vct=140\\\\rspd=110\\友ちゃん、お帰りぃ。。。。。。。。");
+    tts.say("\\vct=110\\\\rspd=140\\ねぇグーグル。ライトつけて");
+  }).fail(function(error) {
+    console.log("Error!");
+  });
+}
+	init();
+    </script>
+  </head>
+
+</html>

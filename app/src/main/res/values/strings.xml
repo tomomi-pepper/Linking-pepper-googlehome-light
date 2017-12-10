@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Linking Pepper Google Home Light</string>
+    <string name="pairing_sensor_text">ペアリングしているデバイスのセンサ情報をリアルタイム表示します。</string>
+    <string name="sensor_log_title">センサーログ</string>
+    <string name="time_app">表示 : 受信時刻</string>
+</resources>
