@@ -106,7 +106,7 @@ Android/PepperFlowerApp/app/libs/
 <pre>Android/PepperFlowerApp/app/src/main/java/com/sample/nttdocomo/android/linkingpairingdemo/pairing/SensorDemoActivity.java</pre>
 の321行目のURLのIPアドレスを各自の環境に合わせて変更してください。
 ```
-URL url = new URL("http://127.0.0.1/set_humidity.php?humidity=" + humidity);
+URL url = new URL("http://192.168.0.20/say_ok_google.html");
 ```
 
 # Server
@@ -132,7 +132,8 @@ AndroidアプリからWebViewとしてsay_ok_google.htmlをリクエストする
       });
 
       session.service("ALTextToSpeech").done(function(tts) {
-        tts.say("オッケー、グーグル。ライトつけて");
+	    tts.say("\\vct=140\\\\rspd=110\\友ちゃん、お帰りぃ。。。。。。。。");
+	    tts.say("\\vct=110\\\\rspd=140\\ねぇグーグル。ライトつけて");
       }).fail(function(error) {
         console.log("Error!");
       });
