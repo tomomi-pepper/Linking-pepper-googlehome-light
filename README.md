@@ -92,7 +92,7 @@ private void request_say_ok_google() throws IOException {
 }
 ```
 
-[Linking開発者サイト](https://linkingiot.com/developer/index.html)サイトから
+[Linking開発者サイト](https://linkingiot.com/developer/index.html)から
 ```
 sdaiflib.jar
 ```
