@@ -42,7 +42,8 @@ public void onSensorData(String bd, int type, float x, float y, float z,
 
 isDoorOpened()でドアが開いたことを検知して、request_say_ok_google()を利用して、サーバー経由でPepperに「ねぇ Google ライトつけて」と言わせます。
 
-<code>public static final int MAX_IDX_PAST_Z = 10;
+```
+public static final int MAX_IDX_PAST_Z = 10;
 float[] past_z = new float[10];
 int idx4past_z = 0;
 
@@ -88,22 +89,32 @@ private void request_say_ok_google() throws IOException {
 
         }
     }).start();
-}</code>
+}
+```
 
-[Linking開発者サイト](https://linkingiot.com/developer/index.html)サイトから<code>sdaiflib.jar</code>を取得して
-<code>Android/PepperFlowerApp/app/libs/</code>
+[Linking開発者サイト](https://linkingiot.com/developer/index.html)サイトから
+```
+sdaiflib.jar
+```
+を取得して
+```
+Android/PepperFlowerApp/app/libs/
+```
 に設置してください。
 
 また、
 <pre>Android/PepperFlowerApp/app/src/main/java/com/sample/nttdocomo/android/linkingpairingdemo/pairing/SensorDemoActivity.java</pre>
 の321行目のURLのIPアドレスを各自の環境に合わせて変更してください。
-<code>URL url = new URL("http://127.0.0.1/set_humidity.php?humidity=" + humidity);</code>
+```
+URL url = new URL("http://127.0.0.1/set_humidity.php?humidity=" + humidity);
+```
 
 # Server
 
 AndroidアプリからWebViewとしてsay_ok_google.htmlをリクエストすることで、qimessaging経由でPepperにsayを要求します。
 
-<code><!DOCTYPE html>
+```
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -127,4 +138,6 @@ AndroidアプリからWebViewとしてsay_ok_google.htmlをリクエストする
       });
     }
 	init();
-    </script></code>
+    </script>
+```
+
