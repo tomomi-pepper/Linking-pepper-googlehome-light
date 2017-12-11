@@ -9,8 +9,8 @@ Android以下のソースコードは[Project Linking](https://linkingiot.com/)�
 
 Z軸の加速度の変化から、ドアが開いたことを検知。それをサーバーに通知します。追加したメソッドは下記の通り。過去10回分のZ軸の加速度を保存して、最新のZ軸の加速度がその平均値の3倍以上のときにドアが開いたと判定します。
 
-<code>
-public void onSensorData(String bd, int type, float x, float y, float z,
+
+<code>public void onSensorData(String bd, int type, float x, float y, float z,
                          byte[] originalData, long time) {
 
     this.bd = bd;
@@ -36,14 +36,12 @@ public void onSensorData(String bd, int type, float x, float y, float z,
     if(DBG) Log.d(TAG, "[" + bd + "] のデータ[type:" + type + "]を受信 " +  "x:" + x + ", y : " + y +", z : " + z);
 
     mHandler.postDelayed(listUpdateTask, 0);
+}</code>
 
-}
-</code>
 
 isDoorOpened()でドアが開いたことを検知して、request_say_ok_google()を利用して、サーバー経由でPepperに「ねぇ Google ライトつけて」と言わせます。
 
-<code>
-public static final int MAX_IDX_PAST_Z = 10;
+<code>public static final int MAX_IDX_PAST_Z = 10;
 float[] past_z = new float[10];
 int idx4past_z = 0;
 
@@ -89,8 +87,6 @@ private void request_say_ok_google() throws IOException {
 
         }
     }).start();
-
-
 }
 </code>
 
