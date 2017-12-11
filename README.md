@@ -104,7 +104,7 @@ Android/PepperFlowerApp/app/libs/
 
 また、
 <pre>Android/PepperFlowerApp/app/src/main/java/com/sample/nttdocomo/android/linkingpairingdemo/pairing/SensorDemoActivity.java</pre>
-の321行目のURLのIPアドレスを各自の環境に合わせて変更してください。
+の205行目のURLのIPアドレスを各自の環境に合わせて変更してください。
 ```
 URL url = new URL("http://192.168.0.20/say_ok_google.html");
 ```
